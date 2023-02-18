@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 
-<body class="">
+<body>
     <div class="bg-[#794556]">
         <div class="container h-screen mx-auto grid grid-cols-1 md:grid-cols-2">
             <div class="">
@@ -18,16 +18,67 @@
                 </div>
                 <div class="">
                     <p class="text-lg md:text-3xl my-1 md:my-3 ml-4 md:ml-0 font-routtage text-[#CBC5B4]">27.10.23</p>
-                    <p class="text-lg md:text-3xl my-1 md:my-3 ml-4 md:ml-0 font-rubik text-[#CBC5B4]">We Are Getting Married</p>
-                    <p class="text-4xl md:text-7xl my-2 md:my-6 ml-4 md:ml-0 font-bold font-playfair text-[#FCFBF7]">Ersad</p>
-                    <p class="text-4xl md:text-7xl my-2 md:my-6 ml-4 md:ml-0 font-bold font-playfair text-[#FCFBF7]">& Anis</p>
+                    <p class="text-lg md:text-3xl my-1 md:my-3 ml-4 md:ml-0 font-rubik text-[#CBC5B4]">We Are Getting
+                        Married</p>
+                    <p class="text-4xl md:text-7xl my-2 md:my-6 ml-4 md:ml-0 font-bold font-playfair text-[#FCFBF7]">
+                        Ersad</p>
+                    <p class="text-4xl md:text-7xl my-2 md:my-6 ml-4 md:ml-0 font-bold font-playfair text-[#FCFBF7]">&
+                        Anis</p>
                 </div>
             </div>
             <div class="flex flex-col justify-end">
-                <img src="public/img/arsa.png" class="mxsm:object-cover mxsm:object-top mxsm:w-full h-[50vh] md:h-[75vh] lg:h-screen"/>
+                <img src="public/img/arsa.png"
+                    class="mxsm:object-cover mxsm:object-top mxsm:w-full h-[50vh] md:h-[75vh] lg:h-screen" />
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#F0E9E2]">
+        <div class="container mx-auto grid grid-flow-col gap-5 justify-center text-center py-8 md:py-14 auto-cols-max">
+            <div class="flex flex-col text-neutral-content">
+                <div class="rounded-box py-4 px-2 bg-[#98AEA2]">
+                    <p class="font-rubik text-[#FCFBF7] text-2xl md:text-3xl px-3 md:px-4 py-3 md:py-4" id="day">00</p>
+                </div>
+                <p class="font-rubik py-2 text-md md:text-lg text-[#9C8471]">Days</p>
+            </div>
+            <div class="flex flex-col text-neutral-content">
+                <div class="rounded-box py-4 px-2 bg-[#98AEA2]">
+                    <p class="font-rubik text-[#FCFBF7] text-2xl md:text-3xl px-3 md:px-4 py-3 md:py-4" id="hour">00</p>
+                </div>
+                <p class="font-rubik py-2 text-md md:text-lg text-[#9C8471]">Hours</p>
+            </div>
+            <div class="flex flex-col text-neutral-content">
+                <div class="rounded-box py-4 px-2 bg-[#98AEA2]">
+                    <p class="font-rubik text-[#FCFBF7] text-2xl md:text-3xl px-3 md:px-4 py-3 md:py-4" id="minute">00</p>
+                </div>
+                <p class="font-rubik py-2 text-md md:text-lg text-[#9C8471]">Minutes</p>
+            </div>
+            <div class="flex flex-col text-neutral-content">
+                <div class="rounded-box py-4 px-2 bg-[#98AEA2]">
+                    <p class="font-rubik text-[#FCFBF7] text-2xl md:text-3xl px-3 md:px-4 py-3 md:py-4" id="second">00</p>
+                </div>
+                <p class="font-rubik py-2 text-md md:text-lg text-[#9C8471]">Seconds</p>
             </div>
         </div>
     </div>
 </body>
+<script>
+    let akadDate = new Date("Oct 27, 2023 15:00:00").getTime();
+
+    let x = setInterval(function () {
+        let now = new Date().getTime();
+
+        let distance = akadDate - now;
+
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('day').innerHTML = days
+        document.getElementById('hour').innerHTML = hours
+        document.getElementById('minute').innerHTML = minutes
+        document.getElementById('second').innerHTML = seconds
+    }, 1000);
+</script>
 
 </html>
