@@ -2,14 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-
 @font-face {
-    font-family: "Routtage";
-    src: url("../../public/font/Routtage.ttf");
+    font-family: "Rosarivo";
+    src: url("../../public/font/Rosarivo.ttf");
 }
 
-@font-face {
-  font-family: "Playfair";
-  src: url("../../public/font/Playfair.ttf");
+.animate-left-right {
+    animation: leftRight 5s ease-in-out -1s infinite alternate;
+
+}
+
+@keyframes leftRight {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(-5deg);
+    }
 }
