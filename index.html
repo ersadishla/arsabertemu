@@ -53,6 +53,7 @@
 
 <body class="bg-[#FEFCFC]">
     <div class="container mx-auto">
+        <!-- Hero Section -->
         <div class="grid grid-cols-1 h-screen">
             <div class="row-span-full col-span-full self-start ml-5 md:ml-0 mt-10">
                 <img src="/public/img/logo.svg"
@@ -114,7 +115,9 @@
                 </div>
             </div>
         </div>
+        <!-- End Hero Section -->
 
+        <!-- Story Section -->
         <div class="flex justify-center my-5">
             <iframe class="border-[10px] lg:border-[20px] border-white max-w-5xl h-[14rem] md:h-[20rem] lg:h-[24rem] xl:h-[36rem] aspect-video rounded-lg shadow-lg"
                     src="https://www.youtube.com/embed/OSRURxZ23oM?si=L4p_SUy4vz-t-h0I"
@@ -123,7 +126,10 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
         </div>
-        <div class="flex items-center mx-auto my-20 relative w-[25rem] md:w-[50rem] xl:w-[70rem] aspect-[4/1]">
+        <!-- End Story Section -->
+
+        <!-- Quote Section -->
+        <div class="flex items-center mx-auto my-14 relative w-[25rem] md:w-[50rem] xl:w-[70rem] aspect-[4/1]">
             <div class="bg-[#F8F5F5] shadow-lg mx-10 rounded-3xl">
                 <div class="font-rosarivo text-[#605045] text-right text-base md:text-xl p-20 md:p-32 md:pl-48">
                     <p>And among His Signs is this, that He created for you mates from among yourselves, that He may
@@ -144,20 +150,25 @@
                  data-aos-delay="300"
                  class="animate-left-right absolute w-[30%] md:w-[25%] xl:w-[20%] overflow-visible top-[81%] md:top-[65%] xl:top-[53%] right-[59%] md:right-[68%] xl:right-[73%]" />
         </div>
+        <!-- End Quote Section -->
 
+        <!-- Invitation Section -->
         <div class="flex justify-center">
             <div class="font-rosarivo text-center">
                 <p class="text-[#605045] text-2xl sm:text-3xl md:text-4xl">Hello!</p>
                 <p class="text-[#78797A] text-base md:text-xl my-2">You're invited to our wedding ceremony</p>
             </div>
         </div>
+        <!-- End Invitation Section -->
 
+        <!-- Bride Groom Section -->
         <div class="grid grid-cols-2 gap-4 font-rosarivo text-center">
             <div class="col-span-2 md:col-span-1 my-2">
                 <div class="flex mx-auto relative w-[60%]">
                     <div>
                         <img src="public/img/ersad.png"
-                             alt="" class="object-cover">
+                             alt=""
+                             class="object-cover">
                         <p class="text-[#816A5A] text-xl sm:text-2xl md:text-3xl mt-6">Ersad Ahmad Ishlahuudin</p>
                         <p class="text-[#78797A] text-base md:text-xl mt-2">a tech-savvy groom</p>
                     </div>
@@ -167,18 +178,73 @@
                 <div class="flex mx-auto relative w-[60%]">
                     <div>
                         <img src="public/img/anis.png"
-                             alt="" class="object-cover">
+                             alt=""
+                             class="object-cover">
                         <p class="text-[#816A5A] text-xl sm:text-2xl md:text-3xl mt-6">Anis Saidatur Rochma</p>
                         <p class="text-[#78797A] text-base md:text-xl mt-2">a design-loving bride</p>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- End Bride Groom Section -->
+
+        <!-- Countdown section -->
+        <div class="grid grid-cols-1 my-5">
+            <div class="row-span-full col-span-full self-end justify-self-center w-screen">
+                <div class="row-span-full overflow-x-auto whitespace-nowrap bg-[#816A5A] text-center py-16 md:py-20">
+                    <p class="font-rosarivo text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl my-5 md:my-10">Save The Date</p>
+                    <p class="font-rosarivo text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl my-5 md:my-10">Saturday, October
+                        25th, 2023</p>
+                    <div class="container mx-auto grid grid-flow-col gap-4 justify-center text-center my-10 text-white">
+                        <div class="flex flex-col text-neutral-content">
+                            <p class="text-3xl md:text-4xl px-3 md:px-4 py-3 md:py-4"
+                               id="day">00</p>
+                            <p class="font-rosarivo py-2 text-md md:text-lg">Days</p>
+                        </div>
+                        <div class="flex flex-col text-neutral-content">
+                            <p class="text-3xl md:text-4xl px-3 md:px-4 py-3 md:py-4"
+                               id="hour">00</p>
+                            <p class="font-rosarivo py-2 text-md md:text-lg">Hours</p>
+                        </div>
+                        <div class="flex flex-col text-neutral-content">
+                            <p class="text-3xl md:text-4xl px-3 md:px-4 py-3 md:py-4"
+                               id="minute">00</p>
+                            <p class="font-rosarivo py-2 text-md md:text-lg">Minutes</p>
+                        </div>
+                        <div class="flex flex-col text-neutral-content">
+                            <p class="text-3xl md:text-4xl px-3 md:px-4 py-3 md:py-4"
+                               id="second">00</p>
+                            <p class="font-rosarivo py-2 text-md md:text-lg">Seconds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Countdown Section -->
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        let ourDate = new Date("Oct 28, 2023 19:00:00").getTime();
+
+        let x = setInterval(function () {
+            let now = new Date().getTime();
+
+            let distance = ourDate - now;
+
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('day').innerHTML = days
+            document.getElementById('hour').innerHTML = hours
+            document.getElementById('minute').innerHTML = minutes
+            document.getElementById('second').innerHTML = seconds
+        }, 1000);
     </script>
 </body>
 
