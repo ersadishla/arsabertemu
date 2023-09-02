@@ -298,6 +298,76 @@
             </div>
         </div>
         <!-- End Place Section -->
+
+        <!-- RSVP Section -->
+        <div
+             class="flex items-center justify-center mx-auto my-24 md:my-32 relative w-[20rem] md:w-[50rem] xl:w-[70rem] aspect-[2/1] bg-[#FEFCFC] border-2 border-[#5F4D41] shadow-2xl rounded-[3rem]">
+            <div class="font-rosarivo text-[#605045] py-10 md:py-20 w-[80%]">
+                <p class="text-center text-[#816A5A] text-2xl md:text-3xl my-5">RSVP</p>
+                <p class="text-center text-[#78797A] text-base md:text-xl my-3">Please kindly respond by the 20
+                    September</p>
+
+                <div class="grid grid-cols-2 grid-rows-4 my-8">
+                    <div class="flex items-center col-span-1 my-1">
+                        <input id="rsvp-true"
+                               type="radio"
+                               name="rsvp"
+                               value="true"
+                               class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300">
+                        <label for="rsvp-true"
+                               class="block ml-2 font-medium">
+                            Will see you there
+                        </label>
+                    </div>
+                    <div class="flex items-center col-span-1 my-1">
+                        <input id="rsvp-false"
+                               type="radio"
+                               name="rsvp"
+                               value="false"
+                               class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300">
+                        <label for="rsvp-false"
+                               class="block ml-2 font-medium">
+                            Sorry to miss out
+                        </label>
+                    </div>
+                    <div class="col-span-2 my-1">
+                        <label for="guests"
+                               class="block mb-2">Name</label>
+                        <input type="text"
+                               id="name"
+                               name="name"
+                               placeholder="Your name"
+                               class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+
+                    </div>
+                    <div class="col-span-2 my-1">
+                        <label for="guests"
+                               class="block mb-2">Guests Attending</label>
+                        <input type="text"
+                               id="guests"
+                               name="guests"
+                               placeholder="Number of guests attending"
+                               class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+
+                    </div>
+                    <div class="col-span-2 mt-5 md:mt-8 flex justify-center h-8 md:h-10">
+                        <button type="button"
+                                class="text-sm text[#816A5A] hover:text-white border border-[#605045] hover:border-white hover:bg-[#816A5A] font-medium rounded-2xl text-center w-full md:w-[25%]">Confirm</button>
+                    </div>
+                </div>
+            </div>
+            <img src="public/img/rsvp-upper-frame.png"
+                 alt="Top Left"
+                 data-aos="fade-right"
+                 data-aos-delay="100"
+                 class="animate-left-right -z-10 absolute w-[35%] md:w-[30%] xl:w-[25%] overflow-visible bottom-[81%] md:bottom-[63%] xl:bottom-[58%] right-[74%] md:right-[78%] xl:right-[82%]" />
+            <img src="public/img/rsvp-bottom-frame.png"
+                 alt="Bottom Right"
+                 data-aos="fade-left"
+                 data-aos-delay="100"
+                 class="animate-left-right -z-10 absolute w-[35%] md:w-[30%] xl:w-[25%] overflow-visible top-[81%] md:top-[63%] xl:top-[58%] left-[74%] md:left-[78%] xl:left-[82%]" />
+        </div>
+        <!-- End RSVP Section -->
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
