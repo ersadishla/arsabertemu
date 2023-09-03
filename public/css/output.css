@@ -996,6 +996,14 @@ video {
   gap: 1rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
 .place-self-center {
   place-self: center;
 }
@@ -1590,6 +1598,10 @@ video {
 
   .md\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
   }
 
   .md\:border-2 {
