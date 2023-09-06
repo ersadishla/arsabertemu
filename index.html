@@ -247,7 +247,7 @@
         <!-- Place Section -->
         <div class="grid grid-cols-2 font-rosarivo">
             <div class="col-span-2 md:col-span-1 py-8 md:py-12 border-b md:border-b-0 md:border-r border-[#816A5A]">
-                <div class="flex ml-5 relative">
+                <div class="flex ml-5 relative w-[80%]">
                     <div>
                         <p class="text-[#816A5A] text-2xl md:text-3xl mt-6 mb-10">Akad Nikah</p>
                         <div class="flex items-center my-4 md:my-6">
@@ -282,7 +282,7 @@
                 </div>
             </div>
             <div class="col-span-2 md:col-span-1 py-8 md:py-12 border-t md:border-t-0 md:border-l border-[#816A5A]">
-                <div class="flex ml-5 relative">
+                <div class="flex ml-5 relative w-[80%]">
                     <div>
                         <p class="text-[#816A5A] text-2xl md:text-3xl mt-6 mb-10">Resepsi</p>
                         <div class="flex items-center my-4 md:my-6">
@@ -372,7 +372,7 @@
                     </div>
                     <div class="col-span-2 mt-5 md:mt-8 flex justify-center h-8 md:h-10">
                         <button type="button"
-                                class="text-sm text[#816A5A] hover:text-white border border-[#605045] hover:border-white hover:bg-[#816A5A] font-medium rounded-2xl text-center w-full md:w-[25%]">Confirm</button>
+                                class="text-sm text[#816A5A] hover:text-white border border-[#605045] hover:border-white hover:bg-[#816A5A] font-medium rounded-3xl text-center w-full md:w-[25%]">Confirm</button>
                     </div>
                 </div>
             </div>
@@ -516,6 +516,53 @@
             </div>
         </div>
         <!-- End Gallery Section -->
+
+        <!-- Wish section -->
+        <div class="grid grid-cols-1 my-5">
+            <div class="row-span-full col-span-full self-end justify-self-center w-screen">
+                <div class="row-span-full overflow-x-auto whitespace-nowrap bg-[#816A5A] py-10 md:py-20">
+                    <p data-aos="fade-out"
+                       data-aos-delay="100"
+                       class="font-rosarivo text-center text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                        Want to send a wish?</p>
+                    <div
+                         class="row-span-full col-span-full items-center justify-center mx-auto my-10 md:my-16 w-[80%] md:w-[50rem] bg-[#FEFCFC] rounded-3xl">
+
+
+                        <div class="grid grid-cols-2 my-3 px-5 md:px-16 py-6 md:py-10 font-rosarivo">
+                            <div class="col-span-2 my-1">
+                                <label for="guests"
+                                       class="block mb-2">Name</label>
+                                <input type="text"
+                                       id="name"
+                                       name="name"
+                                       placeholder="Your name..."
+                                       class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+
+                            </div>
+                            <div class="col-span-2 my-1">
+                                <label for="wish"
+                                       class="block mb-2">Wish</label>
+                                <textarea id="wish"
+                                          rows="6"
+                                          class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                          placeholder="Write your wish here..."></textarea>
+
+
+                            </div>
+                            <div class="col-span-2 mt-5 md:mt-8 flex justify-center h-8 md:h-10">
+                                <button type="button"
+                                        class="text-sm text[#816A5A] hover:text-white border border-[#605045] hover:border-white hover:bg-[#816A5A] font-medium rounded-3xl text-center w-full md:w-[20rem]">Send
+                                    your own wishes</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Wish Section -->
     </div>
 
     <script src="public/js/aos.js"></script>
