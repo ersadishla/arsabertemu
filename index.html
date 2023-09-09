@@ -327,54 +327,61 @@
                 <p class="text-center text-[#78797A] text-base md:text-xl my-3">Please kindly respond by the 20
                     September</p>
 
-                <div class="grid grid-cols-2 grid-rows-4 my-8">
-                    <div class="flex items-center col-span-1 my-1">
-                        <input id="rsvp-true"
-                               type="radio"
-                               name="rsvp"
-                               value="true"
-                               class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300">
-                        <label for="rsvp-true"
-                               class="block ml-2 font-medium">
-                            Will see you there
-                        </label>
+                <form action="#" method="post">
+                    <div class="grid grid-cols-2 grid-rows-4 my-8">
+                        <div class="flex items-center col-span-1 my-1">
+                            <input id="rsvp-true"
+                                   type="radio"
+                                   name="rsvp"
+                                   value="true"
+                                   class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300" required>
+                            <label for="rsvp-true"
+                                   class="block ml-2 font-medium">
+                                Will see you there
+                            </label>
+                        </div>
+                        <div class="flex items-center col-span-1 my-1">
+                            <input id="rsvp-false"
+                                   type="radio"
+                                   name="rsvp"
+                                   value="false"
+                                   class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300">
+                            <label for="rsvp-false"
+                                   class="block ml-2 font-medium">
+                                Sorry to miss out
+                            </label>
+                        </div>
+                        <div class="col-span-2 my-1">
+                            <label for="guests"
+                                   class="block mb-2">Name</label>
+                            <input type="text"
+                                   id="name"
+                                   name="name"
+                                   placeholder="Your name"
+                                   class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                   maxlength="100"
+                                   required>
+    
+                        </div>
+                        <div class="col-span-2 my-1">
+                            <label for="guests"
+                                   class="block mb-2">Guests Attending</label>
+                            <input type="number"
+                                   id="guests"
+                                   name="guests"
+                                   placeholder="Number of guests attending"
+                                   class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                   min="0"
+                                   max="10"
+                                   required>
+    
+                        </div>
+                        <div class="col-span-2 mt-5 md:mt-8 flex justify-center h-8 md:h-10">
+                            <button type="submit"
+                                    class="text-sm border text-white hover:text-[#816A5A] hover:border-[#605045] bg-[#816A5A] hover:bg-white font-medium rounded-3xl text-center w-full md:w-[25%]">Confirm</button>
+                        </div>
                     </div>
-                    <div class="flex items-center col-span-1 my-1">
-                        <input id="rsvp-false"
-                               type="radio"
-                               name="rsvp"
-                               value="false"
-                               class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300">
-                        <label for="rsvp-false"
-                               class="block ml-2 font-medium">
-                            Sorry to miss out
-                        </label>
-                    </div>
-                    <div class="col-span-2 my-1">
-                        <label for="guests"
-                               class="block mb-2">Name</label>
-                        <input type="text"
-                               id="name"
-                               name="name"
-                               placeholder="Your name"
-                               class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-
-                    </div>
-                    <div class="col-span-2 my-1">
-                        <label for="guests"
-                               class="block mb-2">Guests Attending</label>
-                        <input type="number"
-                               id="guests"
-                               name="guests"
-                               placeholder="Number of guests attending"
-                               class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-
-                    </div>
-                    <div class="col-span-2 mt-5 md:mt-8 flex justify-center h-8 md:h-10">
-                        <button type="button"
-                                class="text-sm border text-white hover:text-[#816A5A] hover:border-[#605045] bg-[#816A5A] hover:bg-white font-medium rounded-3xl text-center w-full md:w-[25%]">Confirm</button>
-                    </div>
-                </div>
+                </form>
             </div>
             <img src="public/img/rsvp-upper-frame.png"
                  alt="Top Left"
@@ -525,39 +532,44 @@
                        data-aos-delay="100"
                        class="font-rosarivo text-center text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                         Want to send a wish?</p>
-                    <div
-                         class="row-span-full col-span-full items-center justify-center mx-auto my-10 md:my-16 w-[80%] md:w-[50rem] bg-[#FEFCFC] rounded-3xl">
-
-
-                        <div class="grid grid-cols-2 my-3 px-5 md:px-16 py-6 md:py-10 font-rosarivo">
-                            <div class="col-span-2 my-2">
-                                <label for="guests"
-                                       class="block mb-2 text-[#816A5A]">Name</label>
-                                <input type="text"
-                                       id="name"
-                                       name="name"
-                                       placeholder="Your name..."
-                                       class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-
+                    <form action="#" method="post">
+                        <div
+                             class="row-span-full col-span-full items-center justify-center mx-auto my-10 md:my-16 w-[80%] md:w-[50rem] bg-[#FEFCFC] rounded-3xl">
+                            <div class="grid grid-cols-2 my-3 px-5 md:px-16 py-6 md:py-10 font-rosarivo">
+                                <div class="col-span-2 my-2">
+                                    <label for="guests"
+                                           class="block mb-2 text-[#816A5A]">Name</label>
+                                    <input type="text"
+                                           id="name"
+                                           name="name"
+                                           placeholder="Your name..."
+                                           class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                           maxlength="100"
+                                           required>
+    
+                                </div>
+                                <div class="col-span-2 my-2">
+                                    <label for="wish"
+                                           class="block mb-2 text-[#816A5A]">Wish</label>
+                                    <textarea id="wish"
+                                              rows="6"
+                                              class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                              placeholder="Write your wish here..."
+                                              maxlength="200"
+                                              required></textarea>
+                                    <p class="text-right font-sans text-sm mt-1 text-[#A74F5D]">200 character max</p>
+    
+    
+                                </div>
+                                <div class="col-span-2 mt-5 md:mt-8 flex justify-center h-8 md:h-10">
+                                    <button type="button"
+                                            class="text-sm text-[#816A5A] hover:text-white border border-[#605045] hover:border-white hover:bg-[#816A5A] font-medium rounded-3xl text-center w-full md:w-[20rem]">Send
+                                        your own wishes</button>
+                                </div>
                             </div>
-                            <div class="col-span-2 my-2">
-                                <label for="wish"
-                                       class="block mb-2 text-[#816A5A]">Wish</label>
-                                <textarea id="wish"
-                                          rows="6"
-                                          class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                          placeholder="Write your wish here..."></textarea>
-
-
-                            </div>
-                            <div class="col-span-2 mt-5 md:mt-8 flex justify-center h-8 md:h-10">
-                                <button type="button"
-                                        class="text-sm text-[#816A5A] hover:text-white border border-[#605045] hover:border-white hover:bg-[#816A5A] font-medium rounded-3xl text-center w-full md:w-[20rem]">Send
-                                    your own wishes</button>
-                            </div>
+    
                         </div>
-
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -566,8 +578,7 @@
         <!-- Friend Wish Section -->
         <!-- class="mb-24 md:mb-36 xl:mb-56" -->
         <div x-data="testimonialCarousel()"
-             x-init="startAutoScroll()"
-             >
+             x-init="startAutoScroll()">
             <div
                  class="flex justify-between items-center text-[#816A5A] text-xl sm:text-2xl md:text-3xl lg:text-4xl my-5 md:my-10 mx-4 md:mx-0">
                 <p data-aos="fade-out"
@@ -592,7 +603,7 @@
                          data-aos-delay="200">
                         <div class="bg-white rounded-lg shadow-lg p-8 h-full">
                             <p class="text-justify"
-                               x-text="testimonial.text.slice(0, 200    ) + (testimonial.text.length > 200   ? '...' : '')">
+                               x-text="testimonial.text.slice(0, 200) + (testimonial.text.length > 200   ? '...' : '')">
                             </p>
                             <p class="text-[#A9A086] font-semibold mt-2 md:mt-4"
                                x-text="testimonial.name">-</p>
