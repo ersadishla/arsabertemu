@@ -372,7 +372,7 @@
                     </div>
                     <div class="col-span-2 mt-5 md:mt-8 flex justify-center h-8 md:h-10">
                         <button type="button"
-                                class="text-sm text[#816A5A] hover:text-white border border-[#605045] hover:border-white hover:bg-[#816A5A] font-medium rounded-3xl text-center w-full md:w-[25%]">Confirm</button>
+                                class="text-sm border text-white hover:text-[#816A5A] hover:border-[#605045] bg-[#816A5A] hover:bg-white font-medium rounded-3xl text-center w-full md:w-[25%]">Confirm</button>
                     </div>
                 </div>
             </div>
@@ -530,9 +530,9 @@
 
 
                         <div class="grid grid-cols-2 my-3 px-5 md:px-16 py-6 md:py-10 font-rosarivo">
-                            <div class="col-span-2 my-1">
+                            <div class="col-span-2 my-2">
                                 <label for="guests"
-                                       class="block mb-2">Name</label>
+                                       class="block mb-2 text-[#816A5A]">Name</label>
                                 <input type="text"
                                        id="name"
                                        name="name"
@@ -540,9 +540,9 @@
                                        class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
 
                             </div>
-                            <div class="col-span-2 my-1">
+                            <div class="col-span-2 my-2">
                                 <label for="wish"
-                                       class="block mb-2">Wish</label>
+                                       class="block mb-2 text-[#816A5A]">Wish</label>
                                 <textarea id="wish"
                                           rows="6"
                                           class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
@@ -589,9 +589,9 @@
                     <div class="row-span-1 md:col-span-1 border border-[#816A5A] rounded-lg shadow-lg h-64 mx-4 md:mx-0"
                          data-aos="fade-in"
                          data-aos-delay="200">
-                        <div class="bg-white rounded-lg shadow-lg p-4 h-full">
+                        <div class="bg-white rounded-lg shadow-lg p-8 h-full">
                             <p class="text-justify"
-                               x-text="testimonial.text"></p>
+                               x-text="testimonial.text.slice(0, 250) + (testimonial.text.length > 250 ? '...' : '')"></p>
                             <p class="text-[#A9A086] font-semibold mt-2 md:mt-4"
                                x-text="testimonial.name">-</p>
                         </div>

@@ -1411,6 +1411,10 @@ video {
   padding: 1.5rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1489,6 +1493,10 @@ video {
 
 .font-\[\#816A5A\] {
   font-family: #816A5A;
+}
+
+.font-\[\#FFF\] {
+  font-family: #FFF;
 }
 
 .text-2xl {
@@ -1855,6 +1863,11 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.hover\:border-\[\#605045\]:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(96 80 69 / var(--tw-border-opacity));
+}
+
 .hover\:bg-\[\#816A5A\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(129 106 90 / var(--tw-bg-opacity));
@@ -1863,6 +1876,11 @@ video {
 .hover\:bg-indigo-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(224 231 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .hover\:text-white:hover {
@@ -1878,6 +1896,11 @@ video {
 .hover\:text-gray-700:hover {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.hover\:text-\[\#816A5A\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(129 106 90 / var(--tw-text-opacity));
 }
 
 .focus\:border-blue-500:focus {
