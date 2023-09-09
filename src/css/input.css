@@ -25,3 +25,25 @@
         transform: rotate(-5deg);
     }
 }
+
+
+
+@keyframes marquee {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -100%;
+	}
+}
+.animate {
+	animation: marquee 15s linear infinite;
+}
+.animate:hover {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+}
+.animate-item {
+    @apply mx-2;
+}

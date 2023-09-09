@@ -552,7 +552,7 @@
                             </div>
                             <div class="col-span-2 mt-5 md:mt-8 flex justify-center h-8 md:h-10">
                                 <button type="button"
-                                        class="text-sm text[#816A5A] hover:text-white border border-[#605045] hover:border-white hover:bg-[#816A5A] font-medium rounded-3xl text-center w-full md:w-[20rem]">Send
+                                        class="text-sm text-[#816A5A] hover:text-white border border-[#605045] hover:border-white hover:bg-[#816A5A] font-medium rounded-3xl text-center w-full md:w-[20rem]">Send
                                     your own wishes</button>
                             </div>
                         </div>
@@ -563,9 +563,49 @@
 
         </div>
         <!-- End Wish Section -->
+
+        <!-- Friend Wish Section -->
+        <div x-data="testimonialCarousel()"
+             x-init="startAutoScroll()">
+            <div
+                 class="flex justify-between items-center text-[#816A5A] text-xl sm:text-2xl md:text-3xl lg:text-4xl my-5 md:my-10">
+                <p data-aos="fade-out"
+                   data-aos-delay="100"
+                   class="font-rosarivo">
+                    Friends Wishes</p>
+                <div>
+                    <button @click="prev()">
+                        <i class="text-2xl md:text-3xl lg:text-4xl ph ph-arrow-circle-left"></i>
+                    </button>
+                    <button @click="next()">
+                        <i class="text-2xl md:text-3xl lg:text-4xl ph ph-arrow-circle-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="grid gap-4 grid-rows-4 md:grid-rows-none md:grid-cols-4 overflow-hidden text-[#918667] font-rosarivo"
+                 x-ref="container">
+                <template x-for="testimonial in getVisibleTestimonials()"
+                          :key="testimonial.id">
+                    <div class="row-span-1 md:col-span-1 border border-[#816A5A] rounded-lg shadow-lg h-64 mx-4 md:mx-0"
+                         data-aos="fade-in"
+                         data-aos-delay="200">
+                        <div class="bg-white rounded-lg shadow-lg p-4 h-full">
+                            <p class="text-justify"
+                               x-text="testimonial.text"></p>
+                            <p class="text-[#A9A086] font-semibold mt-2 md:mt-4"
+                               x-text="testimonial.name">-</p>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <!-- End Friend Wish Section -->
     </div>
 
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="public/js/aos.js"></script>
+    <script src="public/js/alpine.js"
+            defer></script>
     <script>
         AOS.init();
     </script>
@@ -587,6 +627,121 @@
             document.getElementById('minute').innerHTML = minutes
             document.getElementById('second').innerHTML = seconds
         }, 1000);
+    </script>
+
+    <script>
+        function testimonialCarousel() {
+            let interval;
+
+            return {
+                testimonials: [
+                    {
+                        id: 1,
+                        name: "- Adam Smith",
+                        text: `"May your love story continue to grow and flourish with each passing day. Congratulations on finding your forever love!"`,
+                    },
+                    {
+                        id: 2,
+                        name: "- Bob Johnson",
+                        text: `"Wishing you a lifetime filled with love, laughter, and endless joy. Congratulations on your wedding day!"`,
+                    },
+                    {
+                        id: 3,
+                        name: "- Carol Williams",
+                        text: `"May the journey you've embarked upon together be filled with love, understanding, and countless beautiful moments. Congratulations on your marriage!"`,
+                    },
+                    {
+                        id: 4,
+                        name: "- David Jones",
+                        text: `"As you take this new step in life, may your days be filled with love, happiness, and beautiful memories. Congratulations on your wedding!"`,
+                    },
+                    {
+                        id: 5,
+                        name: "- Eve Taylor",
+                        text: `"As you embark on this beautiful journey of marriage, I want to offer my heartfelt congratulations and best wishes. May your love continue to grow stronger with each passing day, and may your life together be filled with joy, laughter, and countless cherished moments. May you always find strength in each other's presence and comfort in each other's embrace. Here's to a lifetime of love, happiness, and beautiful adventures together. Congratulations on your special day, and may your love story be filled with endless happiness!""`,
+                    },
+                    {
+                        id: 6,
+                        name: "- Frank Brown",
+                        text: `"May your love for each other shine brighter with each passing day, and may your life together be as beautiful as your wedding day. Congratulations!"`,
+                    },
+                    {
+                        id: 7,
+                        name: "- George Miller",
+                        text: `"Wishing you a lifetime of love, laughter, and happiness. May your marriage be everything you've ever dreamed of and more. Congratulations!"`,
+                    },
+                    {
+                        id: 8,
+                        name: "- Helen Davis",
+                        text: `"May your marriage be a source of strength, joy, and endless love. Congratulations on this beautiful journey you've begun together!"`,
+                    },
+                    {
+                        id: 9,
+                        name: "- Irene Wilson",
+                        text: `"As you become partners for life, may your love story be the stuff of legends. Wishing you both a lifetime of love and happiness. Congratulations!"`,
+                    },
+                    {
+                        id: 10,
+                        name: "- Kevin Moore",
+                        text: `"May your marriage be filled with all the right ingredients: a heap of love, a dash of laughter, and a sprinkle of adventure. Congratulations on tying the knot!"`,
+                    },
+                    // Add more testimonials here
+                ],
+
+                async fetchTestimonials() {
+                    try {
+                        // const response = await fetch('https://api.example.com/testimonials');
+                        // const data = await response.json();
+                        // this.testimonials = data;
+                    } catch (error) {
+                        // console.error('Error fetching testimonials:', error);
+                    }
+                },
+                currentIndex: 0,
+                cardsPerPage: 4,
+                autoScrollInterval: 5000,
+
+                getVisibleTestimonials() {
+                    const start = this.currentIndex;
+                    const end = this.currentIndex + this.cardsPerPage;
+                    const result = this.testimonials.slice(start, end);
+                    return result;
+                },
+
+                prev() {
+                    if (this.currentIndex > 0) {
+                        this.currentIndex -= this.cardsPerPage;
+                        this.resetAutoScroll();
+                    }
+                },
+
+                next() {
+                    if (this.currentIndex + this.cardsPerPage < this.testimonials.length) {
+                        this.currentIndex += this.cardsPerPage;
+                        this.resetAutoScroll();
+                    }
+                },
+
+                startAutoScroll() {
+                    interval = setInterval(() => {
+                        this.next();
+                    }, this.autoScrollInterval);
+                },
+
+                resetAutoScroll() {
+                    clearInterval(interval);
+                    this.startAutoScroll();
+                },
+
+                mounted() {
+                    this.startAutoScroll();
+                },
+
+                async mounted() {
+                    await this.fetchTestimonials();
+                },
+            };
+        }
     </script>
 </body>
 
